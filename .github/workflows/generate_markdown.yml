@@ -33,6 +33,14 @@ jobs:
       run: |
         python scripts/product_hunt_list_to_md.py
 
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
+
+    - name: Generate JSON Data
+      run: ruby build.rb
+
     - name: Commit files
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"

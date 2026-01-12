@@ -255,9 +255,9 @@
 
     async function fetchIndex() {
         try {
-            // 尝试从本地服务器获取数据
-            const response = await fetch('/api/data');
-            if (!response.ok) throw new Error('Failed to load data from API');
+            // 尝试从静态 JSON 文件获取数据
+            const response = await fetch('./data.json');
+            if (!response.ok) throw new Error('Failed to load data');
             const data = await response.json();
             
             // 将数据存储到全局变量，以便 detail 页面使用
@@ -266,8 +266,8 @@
             renderList(data.index);
         } catch (error) {
             console.error('Error:', error);
-            // 如果 API 失败（可能是直接打开文件），显示提示
-            const errorMsg = '无法连接到数据服务器。请确保已运行 <code>ruby server.rb</code> (或 <code>python3 server.py</code>) 并通过 <a href="http://localhost:8000">http://localhost:8000</a> 访问。';
+            // 如果加载失败，显示提示
+            const errorMsg = '无法加载数据。请确保 data.json 文件存在。';
             document.getElementById('card-list').innerHTML = `<div style="text-align: center; padding: 40px; color: #999;">${errorMsg}</div>`;
         }
     }
