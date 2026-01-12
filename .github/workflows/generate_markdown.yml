@@ -1,53 +1,38 @@
 name: Generate Daily Markdown
 
 on:
-  schedule:
-    - cron: '01 7 * * *'  # 每天UTC时间早上7:01（北京时间下午3:01自动运行）
-  workflow_dispatch:  # 手动触发
+  push:
+    paths:
+      - 'data/**'      # 只要 data 文件夹变动就触发
+  workflow_dispatch:   # 允许你手动点击按钮触发
+
+permissions:
+  contents: write      # 【核心】必须开启此权限，Action 才能修改你的 data.json
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
 
-    - name: Install dependencies
-      run: |
-        pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install openai>=1.0.0 python-dotenv beautifulsoup4 pytz requests
-        pip install python-wordpress-xmlrpc
-        pip list  # 显示已安装的包及其版本
+      - name: Install dependencies
+        run: |
+          # 如果你的 build.rb 用了额外的 gem，请在这里安装
+          gem install kramdown json || true 
 
-    - name: Generate Markdown
-      env:
-        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        PRODUCTHUNT_DEVELOPER_TOKEN: ${{ secrets.PRODUCTHUNT_DEVELOPER_TOKEN }}
-      run: |
-        python scripts/product_hunt_list_to_md.py
+      - name: Run Build Script
+        run: ruby build.rb
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.0'
-
-    - name: Generate JSON Data
-      run: ruby build.rb
-
-    - name: Commit files
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add .
-        git commit -m "Generated daily content" || echo "No changes to commit"
-
-    - name: Push changes
-      run: |
-        git push --force https://${{ secrets.PAT }}@github.com/${{ github.repository_owner }}/producthunt-daily-hot.git HEAD:main
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data.json
+          # 如果 data.json 没变化，就不提交，防止死循环
+          git commit -m "Auto-update data.json" || exit 0
+          git push
