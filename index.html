@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH今日热榜</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); /* Approximate gradient */
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Abstract circles in background */
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+        
+        .header-count {
+            font-size: 18px;
+            opacity: 0.9;
+            vertical-align: super;
+            font-size: 0.6em;
+        }
+
+        .header p {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin: 0;
+            max-width: 600px;
+        }
+
+        .about-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
+            transition: background 0.2s;
+            z-index: 10;
+        }
+        .about-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Card List */
+        .card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+            width: 200px;
+            height: 120px;
+            border-radius: 8px;
+            object-fit: cover;
+            background-color: #eee;
+            flex-shrink: 0;
+            border: 1px solid #eee;
+        }
+
+        .card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            color: #1a1a1a;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .meta-right {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        /* Modal for details */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background: white;
+            margin: 50px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 12px;
+            padding: 30px;
+            position: relative;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .product-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .product-item:last-child {
+            border-bottom: none;
+        }
+        
+        .product-rank {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ccc;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .product-info h3 {
+            margin: 0 0 5px 0;
+        }
+        
+        .product-info a {
+            color: #FF6B6B;
+            text-decoration: none;
+        }
+        
+        .tagline {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <button class="about-btn" onclick="openAbout()">关于</button>
+        <h1>PH今日热榜 <span class="header-count" id="total-count">0</span></h1>
+        <p>分析和推荐Producthunt上的热门产品。我们通过 Product Hunt 的官方 API 获取每天最新的产品榜单，结合 AI 整理分析，给你带来最直观的产品介绍，让你能够快速浏览最新最火爆的产品趋势。每天下午4点准时更新。</p>
+    </div>
+
+    <div class="card-list" id="card-list">
+        <!-- Cards will be injected here -->
+        <div style="text-align: center; padding: 40px; color: #999;">加载中...</div>
+    </div>
+</div>
+
+<!-- Modal for Product Details -->
+<div id="detail-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script>
+    // 内联数据作为后备（或为空）
+    const INLINE_DATA = { index: [], details: {} };
+
+    async function fetchIndex() {
+        try {
+            // 尝试从本地服务器获取数据
+            const response = await fetch('/api/data');
+            if (!response.ok) throw new Error('Failed to load data from API');
+            const data = await response.json();
+            
+            // 将数据存储到全局变量，以便 detail 页面使用
+            window.GLOBAL_DATA = data;
+            
+            renderList(data.index);
+        } catch (error) {
+            console.error('Error:', error);
+            // 如果 API 失败（可能是直接打开文件），显示提示
+            const errorMsg = '无法连接到数据服务器。请确保已运行 <code>ruby server.rb</code> (或 <code>python3 server.py</code>) 并通过 <a href="http://localhost:8000">http://localhost:8000</a> 访问。';
+            document.getElementById('card-list').innerHTML = `<div style="text-align: center; padding: 40px; color: #999;">${errorMsg}</div>`;
+        }
+    }
+
+    function renderList(items) {
+        const container = document.getElementById('card-list');
+        document.getElementById('total-count').textContent = items.length;
+        
+        container.innerHTML = items.map(item => {
+            const topProduct = item.top_product || {};
+            // Calculate relative time
+            let timeAgo = "刚刚";
+            try {
+                const date = new Date(item.date);
+                const now = new Date();
+                const diffTime = Math.abs(now - date);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+                timeAgo = diffDays > 0 ? `${diffDays} 天前` : "今天";
+            } catch (e) {}
+            
+            return `
+                <div class="card" onclick="openDetail('${item.filename}', '${item.title}')">
+                    <img src="${topProduct.image_url || 'https://via.placeholder.com/200x120?text=No+Image'}" alt="${topProduct.name}" class="card-image">
+                    <div class="card-content">
+                        <div>
+                            <div class="card-title">${item.title}</div>
+                            <div class="card-desc">
+                                1. ${topProduct.name} 标语: ${topProduct.tagline || '暂无介绍'}
+                            </div>
+                        </div>
+                        <div class="card-meta">
+                            <span>${timeAgo}</span>
+                            <div class="meta-right">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                <span>${Math.floor(Math.random() * 500) + 100}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    async function openDetail(filename, title) {
+        const modal = document.getElementById('detail-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        
+        modalTitle.textContent = title;
+        modalBody.innerHTML = '<div style="padding: 20px; text-align: center;">加载中...</div>';
+        modal.style.display = 'block';
+        
+        // 优先使用全局数据 (从 API 获取的)
+        if (window.GLOBAL_DATA && window.GLOBAL_DATA.details && window.GLOBAL_DATA.details[filename]) {
+            renderDetailContent(window.GLOBAL_DATA.details[filename]);
+            return;
+        }
+
+        // 其次尝试内联数据
+        if (INLINE_DATA.details && INLINE_DATA.details[filename]) {
+            console.log('Using inline detail data for', filename);
+            renderDetailContent(INLINE_DATA.details[filename]);
+            return;
+        }
+
+        // 如果都没有，说明数据未加载或不存在
+        console.error('Detail not found for', filename);
+        const mdFile = filename.endsWith('.md') ? filename : filename.replace('.json', '.md');
+        modalBody.innerHTML = `<div style="padding: 20px; text-align: center;">
+            <p>无法加载详细数据。</p>
+            <a href="data/${mdFile}" target="_blank">查看 Markdown 源文件</a>
+        </div>`;
+    }
+
+    function renderDetailContent(data) {
+        const modalBody = document.getElementById('modal-body');
+        modalBody.innerHTML = data.products.map(p => `
+            <div class="product-item">
+                <div class="product-rank">${p.rank}</div>
+                <div style="flex: 1;">
+                    <img src="${p.image_url}" style="max-width: 100%; border-radius: 8px; margin-bottom: 10px; display: block;">
+                </div>
+                <div class="product-info" style="flex: 2;">
+                    <h3><a href="${p.url}" target="_blank">${p.name}</a> 🔺${p.votes_count}</h3>
+                    <div class="tagline">${p.tagline}</div>
+                    <p>${p.description}</p>
+                    <div style="font-size: 12px; color: #999;">关键词: ${p.keywords || ''}</div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function closeModal() {
+        document.getElementById('detail-modal').style.display = 'none';
+    }
+    
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('detail-modal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    const ABOUT_HTML = `
+        <div style="line-height: 1.8; padding: 10px;">
+            <p><strong>Product Hunt 每日热榜</strong> 是一个基于 GitHub Action 的自动化工具，它能够每天定时生成 Product Hunt 上的热门产品榜单 Markdown 文件，并自动提交到 GitHub 仓库中。</p>
+            <p>该项目旨在帮助用户快速查看每日的 Product Hunt 热门榜单，并提供更详细的产品信息。</p>
+            
+            <h3>主要功能</h3>
+            <ul>
+                <li><strong>自动获取数据</strong>：每天自动获取前一天的 Product Hunt Top 30 产品数据。</li>
+                <li><strong>中文翻译</strong>：使用 OpenAI 的 GPT-4 模型对产品描述进行高质量翻译。</li>
+                <li><strong>关键词生成</strong>：生成简洁易懂的中文关键词，帮助用户更好地理解产品内容。</li>
+                <li><strong>每日自动化</strong>：通过 GitHub Actions 自动生成并提交每日的 Markdown 文件。</li>
+            </ul>
+
+            <h3>开源地址</h3>
+            <p>
+                <a href="https://github.com/ViggoZ/producthunt-daily-hot" target="_blank" style="color: #FF6B6B; text-decoration: none;">
+                    GitHub: ViggoZ/producthunt-daily-hot
+                </a>
+            </p>
+            
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9em; color: #999;">
+                本项目基于 MIT 许可证开源。<br>
+                数据更新时间: 每天下午 4 点 (北京时间)
+            </div>
+        </div>
+    `;
+
+    function openAbout() {
+        const modal = document.getElementById('detail-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        
+        modalTitle.textContent = "关于本项目";
+        modalBody.innerHTML = ABOUT_HTML;
+        modal.style.display = 'block';
+    }
+
+    // Initial load
+    fetchIndex();
+</script>
+
+</body>
+</html>
