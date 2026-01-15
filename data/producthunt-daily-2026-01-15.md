@@ -9,7 +9,7 @@
 ![remio 2.0](https://ph-files.imgix.net/a1387d0a-d843-46c0-bb72-99a07614b30a.png?auto=format)
 
 **关键词**：remio 2.0, Captures your work to build a searchable knowledge base
-**票数**: 🔺439
+**票数**: 🔺466
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -24,7 +24,7 @@
 ![Vellum](https://ph-files.imgix.net/4d0733d4-c752-4f23-869f-bf3ec81ffb35.png?auto=format)
 
 **关键词**：Build AI agents using plain English to do your boring tasks, Vellum
-**票数**: 🔺380
+**票数**: 🔺395
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -38,14 +38,29 @@
 
 ![Simpl.](https://ph-files.imgix.net/8b0b8744-de40-4d25-87f4-7b0c82a9faa7.png?auto=format)
 
-**关键词**：Simpl., A pleasant Postgres browser for working with real data
-**票数**: 🔺285
+**关键词**：A pleasant Postgres browser for working with real data, Simpl.
+**票数**: 🔺293
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
 ---
 
-## [4. 0xCal](https://www.producthunt.com/products/0xcal?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
+## [4. Undiscord](https://www.producthunt.com/products/undiscord?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
+**标语**：Bulk leave discord servers
+**介绍**：Undiscord shows you all your Discord servers in one place and lets you bulk leave the ones you no longer need, safely and privately.
+**产品网站**: [立即访问](https://www.producthunt.com/r/RVZFKVC4T55QDS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/undiscord?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
+
+![Undiscord](https://ph-files.imgix.net/f7f121cb-5894-4c7f-bc62-7cac119fb4ec.jpeg?auto=format)
+
+**关键词**：Bulk leave discord servers, Undiscord
+**票数**: 🔺196
+**是否精选**：是
+**发布时间**：2026年01月14日 PM04:01 (北京时间)
+
+---
+
+## [5. 0xCal](https://www.producthunt.com/products/0xcal?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
 **标语**：Type + capture your meals to log cals w/ Apple Health Sync
 **介绍**：Most calorie apps feel like a chore – cluttered interfaces, endless database searches, designs stuck in 2015. 0xCal is different. Built for people who care about the apps they use. Describe what you ate naturally, or snap a photo. AI handles the rest. Dark mode first. Minimal UI. Native iOS feel. No ads, no clutter – just a beautiful tool that helps you reach your goals without compromising your home screen. The calorie tracker that finally belongs on your phone.
 **产品网站**: [立即访问](https://www.producthunt.com/r/OGC7SS7URZD46C?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
@@ -60,21 +75,6 @@
 
 ---
 
-## [5. Undiscord](https://www.producthunt.com/products/undiscord?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
-**标语**：Bulk leave discord servers
-**介绍**：Undiscord shows you all your Discord servers in one place and lets you bulk leave the ones you no longer need, safely and privately.
-**产品网站**: [立即访问](https://www.producthunt.com/r/RVZFKVC4T55QDS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
-**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/undiscord?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
-
-![Undiscord](https://ph-files.imgix.net/f7f121cb-5894-4c7f-bc62-7cac119fb4ec.jpeg?auto=format)
-
-**关键词**：Undiscord, Bulk leave discord servers
-**票数**: 🔺190
-**是否精选**：是
-**发布时间**：2026年01月14日 PM04:01 (北京时间)
-
----
-
 ## [6. Ekamoira Google Search Console MCP](https://www.producthunt.com/products/ekamoira-gsc-mcp?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
 **标语**：Query Search Console in Claude & ChatGPT
 **介绍**：You know the drill: Export CSV from Search Console. Upload to ChatGPT. Watch it hallucinate your data. Cry. Repeat. We fixed that. We built this for SEOs who just want to ask questions. Connect your Google account and it's done. Works with Claude, ChatGPT and Cursor instantly. Just ask: - "Why did my traffic drop last Tuesday?" - "Which pages have high impressions but low CTR?" - "Is Google even indexing my new pages?" 30-day free trial. No terminal commands. Zero credit cards harmed.
@@ -83,8 +83,8 @@
 
 ![Ekamoira Google Search Console MCP](https://ph-files.imgix.net/3cb84d78-387f-4edb-bf2d-70c0be84ee99.png?auto=format)
 
-**关键词**：ChatGPT, Ekamoira Google Search Console MCP, Query Search Console in Claude
-**票数**: 🔺153
+**关键词**：Ekamoira Google Search Console MCP, Query Search Console in Claude, ChatGPT
+**票数**: 🔺155
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -98,8 +98,8 @@
 
 ![Lyra Music](https://ph-files.imgix.net/8704566d-ab27-4b6b-b681-53c1fede777b.png?auto=format)
 
-**关键词**：Simple and free music discovery based on how you feel, Lyra Music
-**票数**: 🔺124
+**关键词**：Lyra Music, Simple and free music discovery based on how you feel
+**票数**: 🔺125
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -114,7 +114,7 @@
 ![Redlight Greenlight for Claude Code](https://ph-files.imgix.net/fd025b26-9530-4846-8e53-9994b2a9110e.png?auto=format)
 
 **关键词**：Accept or reject Claude Code permission from anywhere on Mac, Redlight Greenlight for Claude Code
-**票数**: 🔺111
+**票数**: 🔺114
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -128,8 +128,8 @@
 
 ![One Dot](https://ph-files.imgix.net/9c611870-0b56-4c7a-8ee3-c4d5fff9673b.png?auto=format)
 
-**关键词**：updating wallpaper, One Dot, Visualize your life in dots with a daily
-**票数**: 🔺110
+**关键词**：One Dot, Visualize your life in dots with a daily, updating wallpaper
+**票数**: 🔺111
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -143,8 +143,8 @@
 
 ![Taphouse](https://ph-files.imgix.net/b9ac26b4-31d8-47c6-b843-7a2b16c4ee9d.png?auto=format)
 
-**关键词**：The missing GUI for Homebrew, Taphouse
-**票数**: 🔺105
+**关键词**：Taphouse, The missing GUI for Homebrew
+**票数**: 🔺106
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -173,7 +173,7 @@
 
 ![Langfinity AI](https://ph-files.imgix.net/872649e3-a133-4c0d-b27b-43f8a7c9ca9f.png?auto=format)
 
-**关键词**：Langfinity AI, Translate business conversations into any language
+**关键词**：Translate business conversations into any language, Langfinity AI
 **票数**: 🔺101
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
@@ -188,29 +188,14 @@
 
 ![BlocPad - Project & Team Workspace](https://ph-files.imgix.net/bfd97307-0ffc-4b73-8c51-ce566069c241.jpeg?auto=format)
 
-**关键词**：Team Workspace, BlocPad, Kanban and wiki that update instantly for your projects, Project
+**关键词**：Project, BlocPad, Team Workspace, Kanban and wiki that update instantly for your projects
 **票数**: 🔺101
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
 ---
 
-## [14. Knowns CLI](https://www.producthunt.com/products/knowns-cli?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
-**标语**：AI-first CLI for task management and documentation.
-**介绍**：AI-first CLI for task management and documentation. Link docs in tasks, AI reads context automatically. Stop repeating patterns every session.
-**产品网站**: [立即访问](https://www.producthunt.com/r/NEQ6CEB77MT5EB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
-**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/knowns-cli?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
-
-![Knowns CLI](https://ph-files.imgix.net/f2021261-e802-40df-8c50-e8168cd8dcbf.png?auto=format)
-
-**关键词**：Knowns CLI, first CLI for task management and documentation., AI
-**票数**: 🔺96
-**是否精选**：是
-**发布时间**：2026年01月14日 PM04:01 (北京时间)
-
----
-
-## [15. Papercuts](https://www.producthunt.com/products/papercuts?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
+## [14. Papercuts](https://www.producthunt.com/products/papercuts?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
 **标语**：Deploy AI agents to use your production app like a real user
 **介绍**：Deploy AI agents that flow through your production app like a real user. Just provide a URL and get notified when something breaks.
 **产品网站**: [立即访问](https://www.producthunt.com/r/3ZV7P5A34LQFF2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
@@ -218,8 +203,23 @@
 
 ![Papercuts](https://ph-files.imgix.net/fb58755c-5cdc-4ad2-83ad-208c4f1f22bb.png?auto=format)
 
-**关键词**：Deploy AI agents to use your production app like a real user, Papercuts
-**票数**: 🔺95
+**关键词**：Papercuts, Deploy AI agents to use your production app like a real user
+**票数**: 🔺96
+**是否精选**：是
+**发布时间**：2026年01月14日 PM04:01 (北京时间)
+
+---
+
+## [15. Knowns CLI](https://www.producthunt.com/products/knowns-cli?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
+**标语**：AI-first CLI for task management and documentation.
+**介绍**：AI-first CLI for task management and documentation. Link docs in tasks, AI reads context automatically. Stop repeating patterns every session.
+**产品网站**: [立即访问](https://www.producthunt.com/r/NEQ6CEB77MT5EB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/knowns-cli?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+noob+%28ID%3A+261551%29)
+
+![Knowns CLI](https://ph-files.imgix.net/f2021261-e802-40df-8c50-e8168cd8dcbf.png?auto=format)
+
+**关键词**：AI, first CLI for task management and documentation., Knowns CLI
+**票数**: 🔺96
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -263,8 +263,8 @@
 
 ![TransMov](https://ph-files.imgix.net/92337b02-76b2-4d08-a57d-2ecc1bb7be7e.png?auto=format)
 
-**关键词**：edit, and export videos, animations locally on Mac, Convert, TransMov
-**票数**: 🔺88
+**关键词**：animations locally on Mac, Convert, TransMov, edit, and export videos
+**票数**: 🔺89
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -278,7 +278,7 @@
 
 ![Bloka](https://ph-files.imgix.net/bbc2f307-89d8-4a07-81dd-7bc69ddc72c6.jpeg?auto=format)
 
-**关键词**：Bloka, AI turns any object into your focus trigger
+**关键词**：AI turns any object into your focus trigger, Bloka
 **票数**: 🔺87
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
@@ -308,8 +308,8 @@
 
 ![Relinq](https://ph-files.imgix.net/2a41bfac-f35c-47d7-98b7-813f02954658.jpeg?auto=format)
 
-**关键词**：Relinq, Instantly convert music links between platforms
-**票数**: 🔺73
+**关键词**：Instantly convert music links between platforms, Relinq
+**票数**: 🔺75
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -324,7 +324,7 @@
 ![Unfriction](https://ph-files.imgix.net/a0d6bb8b-6b74-4ee8-b002-ce0474e23024.jpeg?auto=format)
 
 **关键词**：Instant local notes for macOS to capture thoughts in <400ms, Unfriction
-**票数**: 🔺66
+**票数**: 🔺68
 **是否精选**：是
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -338,8 +338,8 @@
 
 ![Deedee - ADHD personal helper](https://ph-files.imgix.net/131e67fa-617d-454d-ae46-85225c3e1b48.png?auto=format)
 
-**关键词**：ADHD personal helper, Deedee, №2 after you in managing ADHD
-**票数**: 🔺54
+**关键词**：Deedee, ADHD personal helper, №2 after you in managing ADHD
+**票数**: 🔺55
 **是否精选**：否
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -354,7 +354,7 @@
 ![VibePeak](https://ph-files.imgix.net/82288221-989b-4b26-a6f5-711b95019b77.png?auto=format)
 
 **关键词**：Real estate videos that bring every room to life, VibePeak
-**票数**: 🔺53
+**票数**: 🔺54
 **是否精选**：否
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -369,7 +369,7 @@
 ![Cited](https://ph-files.imgix.net/391a2c11-c391-41b1-9eca-a955a08bb312.png?auto=format)
 
 **关键词**：Cited, See where AI cites you. Fix where it doesn't
-**票数**: 🔺51
+**票数**: 🔺52
 **是否精选**：否
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
 
@@ -383,7 +383,7 @@
 
 ![CleverTalk – Smarter audio notes](https://ph-files.imgix.net/c54031ef-e456-4ed8-8813-9d886b4f437e.png?auto=format)
 
-**关键词**：Free Pro plan for 6 months, CleverTalk – Smarter audio notes, 2000 transcription minutes/mo
+**关键词**：CleverTalk – Smarter audio notes, 2000 transcription minutes/mo, Free Pro plan for 6 months
 **票数**: 🔺39
 **是否精选**：否
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
@@ -398,7 +398,7 @@
 
 ![Gasti](https://ph-files.imgix.net/d7fa60ea-6434-48ef-b1d9-e0f9b62bb798.png?auto=format)
 
-**关键词**：on WhatsApp., Your financial nervous system, Gasti
+**关键词**：Your financial nervous system, Gasti, on WhatsApp.
 **票数**: 🔺37
 **是否精选**：否
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
@@ -428,7 +428,7 @@
 
 ![Text2Cal - Your AI Calendar Assistant](https://ph-files.imgix.net/26a601a2-8a6b-4786-89b0-a492f6275252.png?auto=format)
 
-**关键词**：Your AI Calendar Assistant, Never manually type a calendar event again., Text2Cal
+**关键词**：Never manually type a calendar event again., Your AI Calendar Assistant, Text2Cal
 **票数**: 🔺32
 **是否精选**：否
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
@@ -443,7 +443,7 @@
 
 ![PortoAI](https://ph-files.imgix.net/d069bddb-71bb-4e1c-b904-52cfe18dfd71.png?auto=format)
 
-**关键词**：aware investing AI for Indian markets, Portfolio, PortoAI
+**关键词**：Portfolio, PortoAI, aware investing AI for Indian markets
 **票数**: 🔺31
 **是否精选**：否
 **发布时间**：2026年01月14日 PM04:01 (北京时间)
